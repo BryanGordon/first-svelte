@@ -1,13 +1,13 @@
 <script lang="ts">
-  let cont = 0
+  import Counter from './lib/Counter.svelte';
+import Saludo from './lib/Saludo.svelte';
+  //let cont = 0
 </script>
 
 <main>
-  <h1>App</h1>
-  <span class={ cont > 5 ? 'positive' : 'negative'}>Counter: {cont}</span>
-  <button on:click={cont++}>Increment</button>
-  <button on:click={cont = 0 }>Reset</button>
-
+  <Saludo name = 'Bryan'/>
+  <Counter count = {1} />
+  <Counter count = {0} />
 </main>
 
 <style>
