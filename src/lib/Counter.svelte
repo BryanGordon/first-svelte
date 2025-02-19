@@ -1,10 +1,9 @@
 <script lang="ts">
-  let count: number = $state(0)
-  const increment = () => {
+  export let count: number
+  const increment = () => { 
     count += 1
   }
 </script>
 
-<button onclick={increment}>
-  count is {count}
-</button>
+<h3>el valor es: {count}</h3>
+<button on:click={increment}>Increment</button>
