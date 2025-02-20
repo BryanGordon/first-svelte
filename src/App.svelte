@@ -1,13 +1,26 @@
 <script lang="ts">
-  import Counter from './lib/Counter.svelte';
-import Saludo from './lib/Saludo.svelte';
-  //let cont = 0
+  // import Counter from './lib/Counter.svelte';
+  // import Saludo from './lib/Saludo.svelte';
+  // let cont = 0
+    import Message from './lib/Message.svelte';
+
+    let aux = false 
+    const handleToggle = () => {
+      aux = !aux
+    }
+
 </script>
 
 <main>
-  <Saludo name = 'Bryan'/>
-  <Counter count = {1} />
-  <Counter count = {0} />
+  {#if aux}
+    <Message />
+    {:else} 
+      <div>
+        <h1>No es una alerta</h1>
+      </div>
+  {/if}
+
+  <button on:click={handleToggle}>Hidden/Show</button>
 </main>
 
 <style>
