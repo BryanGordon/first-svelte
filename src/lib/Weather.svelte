@@ -65,5 +65,20 @@
 </section>
 
 <style>
+  .searching {
+    margin-bottom: 30px;
+  }
+
+  input {
+    padding-block: 7px;
+    border-radius: 25px;
+    border-style: none;
+    background-color: rgba(64, 63, 63, 0.756);
+    text-indent: 10px;
+  }
+
+  input:active {
+    border-style: inset;
+  }
 
 </style>
